@@ -41,12 +41,16 @@ int main() {
                 break;
                 
             case 3:
-                // TODO: Андрюха має додати код
-                printf("Multiplication not implemented yet.\n");
+                printf("Result: %d\n", a * b);
+                count++;
                 break;
             case 4:
-                // TODO: Андрюха має додати код
-                printf("Division not implemented yet.\n");
+                if (b == 0) {
+                    printf("Error: Division by zero!\n");
+                } else {
+                    printf("Result: %d\n", a / b);
+                    count++;
+                }
                 break;
             default:
                 printf("Invalid choice!\n");
