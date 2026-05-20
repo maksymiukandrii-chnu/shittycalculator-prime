@@ -28,13 +28,18 @@ int main() {
 
         switch(choice) {
             case 1:
-                // TODO: Женя має додати код
+                                printf("Result: %d\n", a + b);
+                count++;
+                break;
                 printf("Addition not implemented yet.\n");
                 break;
             case 2:
-                // TODO: Женя має додати код
+                                printf("Result: %d\n", a - b);
+                count++;
+                break;
                 printf("Subtraction not implemented yet.\n");
                 break;
+                
             case 3:
                 // TODO: Андрюха має додати код
                 printf("Multiplication not implemented yet.\n");
